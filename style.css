@@ -10,10 +10,8 @@
   --accent-soft:#E0F2FE;
 }
 
-/* RESET */
 *{box-sizing:border-box;margin:0;padding:0}
 
-/* BODY */
 body{
   font-family:Inter,system-ui,sans-serif;
   min-height:100vh;
@@ -24,22 +22,19 @@ body{
     linear-gradient(180deg,var(--bg-1),var(--bg-2),var(--bg-3));
 }
 
-/* CONTAINER */
 .wrap{
   max-width:520px;
   margin:auto;
   padding:32px 20px 80px;
 }
 
-/* HERO / HEADER */
 .hero{
   background:linear-gradient(135deg,var(--accent),var(--accent-2));
   border-radius:30px;
   padding:36px 26px 40px;
   margin-bottom:36px;
-  box-shadow:
-    0 40px 90px rgba(14,165,233,.45),
-    inset 0 0 0 1px rgba(255,255,255,.18);
+  box-shadow:0 40px 90px rgba(14,165,233,.45),
+             inset 0 0 0 1px rgba(255,255,255,.18);
 }
 
 .hero h1{
@@ -54,7 +49,6 @@ body{
   line-height:1.6;
 }
 
-/* GLASS CARD */
 .card{
   background:rgba(255,255,255,.12);
   backdrop-filter: blur(14px);
@@ -63,12 +57,10 @@ body{
   border-radius:24px;
   padding:18px;
   margin-bottom:18px;
-  box-shadow:
-    0 20px 40px rgba(0,0,0,.25),
-    inset 0 0 0 1px rgba(255,255,255,.05);
+  box-shadow:0 20px 40px rgba(0,0,0,.25),
+             inset 0 0 0 1px rgba(255,255,255,.05);
 }
 
-/* TEXT */
 h2{
   font-size:1.4rem;
   font-weight:900;
@@ -82,7 +74,6 @@ p{
   margin-bottom:12px;
 }
 
-/* BADGE */
 .badge{
   display:inline-block;
   font-size:.7rem;
@@ -95,7 +86,6 @@ p{
   margin-bottom:8px;
 }
 
-/* BUTTON */
 .btn{
   display:inline-block;
   margin-top:12px;
@@ -109,7 +99,6 @@ p{
   box-shadow:0 12px 26px rgba(59,130,246,.45);
 }
 
-/* FOOTER NOTE */
 .note{
   margin-top:28px;
   font-size:.85rem;
