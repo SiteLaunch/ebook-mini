@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
 
 *{
   box-sizing:border-box;
@@ -7,13 +7,15 @@
 }
 
 body{
-  font-family:Inter,system-ui,sans-serif;
+  font-family: Inter, system-ui, sans-serif;
   min-height:100vh;
+  color:#ffffff;
+
   background:
-    radial-gradient(900px 400px at 20% -10%, rgba(59,130,246,.25), transparent 40%),
-    radial-gradient(700px 400px at 90% 20%, rgba(14,165,233,.25), transparent 45%),
-    linear-gradient(180deg,#020617,#020617);
-  color:#fff;
+    radial-gradient(900px 420px at 15% 8%, rgba(56,189,248,.20), transparent 40%),
+    radial-gradient(700px 360px at 85% 18%, rgba(99,102,241,.18), transparent 45%),
+    radial-gradient(500px 300px at 50% 80%, rgba(14,165,233,.12), transparent 50%),
+    linear-gradient(180deg,#020617,#020617,#030a2b);
 }
 
 /* CONTAINER */
@@ -29,11 +31,12 @@ body{
   justify-content:center;
   align-items:center;
   gap:10px;
-  margin-bottom:40px;
+  margin-bottom:44px;
 }
 .header h1{
-  font-size:1.6rem;
-  font-weight:800;
+  font-size:1.7rem;
+  font-weight:900;
+  text-shadow:0 2px 12px rgba(0,0,0,.45);
 }
 .logo{
   font-size:1.6rem;
@@ -43,7 +46,7 @@ body{
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:26px;
+  gap:28px;
   justify-items:center;
 }
 
@@ -52,36 +55,45 @@ body{
   width:100%;
   max-width:260px;
   background:rgba(255,255,255,.06);
+  backdrop-filter: blur(10px);
   border-radius:22px;
   padding:18px;
   text-decoration:none;
   color:#fff;
+
   box-shadow:
-    0 20px 40px rgba(0,0,0,.35),
-    inset 0 0 0 1px rgba(255,255,255,.08);
+    0 25px 50px rgba(0,0,0,.55),
+    inset 0 0 0 1px rgba(255,255,255,.10);
+
   transition:transform .25s ease, box-shadow .25s ease;
 }
 
 .ebook-card:hover{
-  transform:translateY(-6px);
+  transform: translateY(-4px);
   box-shadow:
-    0 30px 60px rgba(0,0,0,.5),
-    inset 0 0 0 1px rgba(255,255,255,.15);
+    0 35px 70px rgba(0,0,0,.65),
+    inset 0 0 0 1px rgba(255,255,255,.16);
 }
 
+/* COVER */
 .ebook-card img{
   width:100%;
   aspect-ratio:1/1;
   object-fit:cover;
   border-radius:16px;
-  background:#0b122b;
+  background:#020617;
+
+  box-shadow:
+    0 18px 35px rgba(0,0,0,.55);
 }
 
+/* TITLE */
 .ebook-card h3{
   margin-top:14px;
   font-size:.95rem;
-  font-weight:700;
+  font-weight:800;
   text-align:center;
+  text-shadow:0 2px 10px rgba(0,0,0,.4);
 }
 
 /* EMPTY CARD */
@@ -101,4 +113,11 @@ body{
   align-items:center;
   font-size:3rem;
   opacity:.6;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .container{
+    padding:28px 16px 60px;
+  }
 }
