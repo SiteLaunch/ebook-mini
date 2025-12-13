@@ -12,7 +12,7 @@ body{
   color:#ffffff;
 
   background:
-    radial-gradient(900px 450px at 15% 10%, rgba(0,255,255,.38), transparent 40%),
+    radial-gradient(900px 450px at 15% 10%, rgba(0,255,255,.35), transparent 40%),
     radial-gradient(800px 400px at 85% 20%, rgba(59,130,246,.45), transparent 45%),
     radial-gradient(600px 360px at 50% 85%, rgba(0,180,255,.32), transparent 55%),
     linear-gradient(180deg,#020617,#020617,#020a3a);
@@ -41,9 +41,10 @@ body{
 }
 .header p{
   font-size:.95rem;
-  opacity:.95;
   max-width:420px;
   text-align:center;
+  opacity:.95;
+  line-height:1.45;
   text-shadow:0 0 12px rgba(0,200,255,.4);
 }
 
@@ -53,6 +54,28 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:34px;
   justify-items:center;
+}
+
+/* ===== PULSE ANIMATION ===== */
+@keyframes pulseGlow{
+  0%{
+    box-shadow:
+      0 0 0 2px rgba(0,200,255,.45),
+      0 0 22px rgba(0,200,255,.30),
+      0 30px 65px rgba(0,0,0,.65);
+  }
+  50%{
+    box-shadow:
+      0 0 0 2px rgba(0,230,255,.75),
+      0 0 38px rgba(0,220,255,.55),
+      0 30px 65px rgba(0,0,0,.65);
+  }
+  100%{
+    box-shadow:
+      0 0 0 2px rgba(0,200,255,.45),
+      0 0 22px rgba(0,200,255,.30),
+      0 30px 65px rgba(0,0,0,.65);
+  }
 }
 
 /* ===== FRAME CARD ===== */
@@ -68,20 +91,14 @@ body{
   background:
     linear-gradient(180deg, rgba(2,6,23,.85), rgba(2,6,23,.95));
 
-  box-shadow:
-    0 0 0 2px rgba(0,200,255,.55),
-    0 0 28px rgba(0,200,255,.35),
-    0 30px 65px rgba(0,0,0,.65);
+  animation: pulseGlow 3.8s ease-in-out infinite;
 
-  transition:transform .25s ease, box-shadow .25s ease;
+  transition:transform .25s ease;
 }
 
 .ebook-card:hover{
   transform: translateY(-6px);
-  box-shadow:
-    0 0 0 2px rgba(0,230,255,.9),
-    0 0 45px rgba(0,220,255,.65),
-    0 45px 90px rgba(0,0,0,.75);
+  animation-play-state: paused;
 }
 
 /* COVER */
@@ -97,7 +114,7 @@ body{
     0 18px 35px rgba(0,0,0,.55);
 }
 
-/* TITLE AREA */
+/* TITLE */
 .ebook-title{
   margin-top:14px;
   padding:12px 10px;
@@ -109,7 +126,6 @@ body{
 
   text-align:center;
 }
-
 .ebook-title h3{
   font-size:.95rem;
   font-weight:900;
