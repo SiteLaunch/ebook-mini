@@ -2,32 +2,40 @@
 <html lang="ms">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ebook RM3</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-body{font-family:Inter;background:#1E2328;color:#F1F5F9;padding:28px;}
-.container{max-width:680px;margin:auto;}
-.mark{background:#262B31;padding:16px;border-radius:14px;margin-bottom:20px;}
-button{margin-top:20px;background:none;border:1.5px solid #343A40;
-color:#A8B0BC;padding:12px 16px;border-radius:12px;}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <script>
 if(localStorage.getItem("ebook_access")!=="yes"){
-window.location.href="login.html";}
+  window.location.href="login.html";
+}
 </script>
-<div class="container">
-<div class="mark">Akses disahkan ✅<br>Anda boleh baca ebook ini bila-bila masa.</div>
-<h1>Versi Penuh</h1>
-<p>Ini bahagian sambungan yang lebih terus terang dan praktikal.</p>
-<button onclick="logout()">Logout / Reset Access</button>
+
+<div class="wrap">
+
+  <div class="hero">
+    <h1>Ebook Versi Penuh</h1>
+    <p>Akses disahkan. Baca bila-bila masa.</p>
+  </div>
+
+  <div class="card">
+    <p>Ini sambungan ebook versi penuh.</p>
+    <p>Lebih terus, lebih jujur, lebih praktikal.</p>
+
+    <button onclick="logout()" class="btn">Logout / Reset Akses</button>
+  </div>
+
 </div>
+
 <script>
 function logout(){
-localStorage.removeItem("ebook_access");
-window.location.href="login.html";}
+  localStorage.removeItem("ebook_access");
+  window.location.href="login.html";
+}
 </script>
+
 </body>
 </html>
