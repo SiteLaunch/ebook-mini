@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap');
 
 *{
   box-sizing:border-box;
@@ -12,10 +12,10 @@ body{
   color:#ffffff;
 
   background:
-    radial-gradient(900px 420px at 15% 8%, rgba(56,189,248,.38), transparent 40%),
-    radial-gradient(700px 360px at 85% 18%, rgba(34,211,238,.32), transparent 45%),
-    radial-gradient(600px 360px at 50% 85%, rgba(125,211,252,.28), transparent 55%),
-    linear-gradient(180deg,#030a2b,#06114f,#081a6a);
+    radial-gradient(900px 450px at 15% 10%, rgba(0,255,255,.35), transparent 40%),
+    radial-gradient(800px 400px at 85% 20%, rgba(59,130,246,.45), transparent 45%),
+    radial-gradient(600px 360px at 50% 85%, rgba(0,180,255,.30), transparent 55%),
+    linear-gradient(180deg,#020617,#020617,#020a3a);
 }
 
 /* CONTAINER */
@@ -34,19 +34,20 @@ body{
   margin-bottom:44px;
 }
 .header h1{
-  font-size:1.8rem;
+  font-size:1.9rem;
   font-weight:900;
-  text-shadow:0 2px 14px rgba(0,0,0,.35);
+  letter-spacing:.5px;
+  text-shadow:0 0 18px rgba(0,200,255,.6);
 }
 .logo{
-  font-size:1.7rem;
+  font-size:1.8rem;
 }
 
 /* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px;
+  gap:32px;
   justify-items:center;
 }
 
@@ -54,16 +55,16 @@ body{
 .ebook-card{
   width:100%;
   max-width:260px;
-  background:rgba(255,255,255,.08);
-  backdrop-filter: blur(12px);
-  border-radius:24px;
-  padding:18px;
+  background:rgba(255,255,255,.06);
+  backdrop-filter: blur(14px);
+  border-radius:26px;
+  padding:16px;
   text-decoration:none;
   color:#fff;
 
   box-shadow:
-    0 25px 55px rgba(0,0,0,.45),
-    inset 0 0 0 1px rgba(255,255,255,.14);
+    0 30px 65px rgba(0,0,0,.55),
+    inset 0 0 0 1px rgba(0,200,255,.25);
 
   transition:transform .25s ease, box-shadow .25s ease;
 }
@@ -71,8 +72,8 @@ body{
 .ebook-card:hover{
   transform: translateY(-6px);
   box-shadow:
-    0 38px 75px rgba(0,0,0,.55),
-    inset 0 0 0 1px rgba(255,255,255,.22);
+    0 45px 90px rgba(0,0,0,.65),
+    inset 0 0 0 1px rgba(0,220,255,.45);
 }
 
 /* COVER */
@@ -84,16 +85,25 @@ body{
   background:#020617;
 
   box-shadow:
-    0 18px 35px rgba(0,0,0,.45);
+    0 18px 35px rgba(0,0,0,.55);
 }
 
-/* TITLE */
-.ebook-card h3{
+/* TITLE AREA (FIX UTAMA) */
+.ebook-title{
   margin-top:14px;
-  font-size:.95rem;
-  font-weight:800;
+  padding:10px 8px;
+  background:rgba(2,6,23,.65);
+  border-radius:14px;
+
   text-align:center;
-  text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+
+.ebook-title h3{
+  font-size:.95rem;
+  font-weight:900;
+  line-height:1.25;
+  color:#e0f7ff;
+  text-shadow:0 0 10px rgba(0,200,255,.6);
 }
 
 /* EMPTY CARD */
@@ -107,12 +117,12 @@ body{
   width:100%;
   aspect-ratio:1/1;
   border-radius:18px;
-  background:rgba(255,255,255,.12);
+  background:rgba(0,200,255,.15);
   display:flex;
   justify-content:center;
   align-items:center;
   font-size:3rem;
-  opacity:.7;
+  opacity:.8;
 }
 
 /* RESPONSIVE */
