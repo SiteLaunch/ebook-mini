@@ -3,36 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login Ebook</title>
+<title>Login</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="wrap">
-
   <div class="hero">
     <h1>Login Ebook</h1>
-    <p>Masukkan kod akses anda.</p>
+    <p>Masukkan kod akses</p>
   </div>
 
   <div class="card">
     <input id="code" placeholder="Kod akses"
-      style="width:100%;padding:14px;border-radius:12px;border:none;margin-bottom:12px;">
+      style="width:100%;padding:14px;border-radius:12px;border:none;">
     <button onclick="login()" class="btn">Buka Ebook</button>
-    <p id="msg"></p>
-    <p class="note"><a href="hilang-akses.html" style="color:#E0F2FE">Hilang akses?</a></p>
   </div>
-
 </div>
 
 <script>
 function login(){
-  const code=document.getElementById("code").value.trim().toUpperCase();
-  if(code==="MULA2025"){
+  if(document.getElementById("code").value==="MULA2025"){
     localStorage.setItem("ebook_access","yes");
-    window.location.href="ebook-rm3.html";
+    window.location.href="index.html";
   }else{
-    document.getElementById("msg").innerText="Kod tidak sah";
+    alert("Kod salah");
   }
 }
 </script>
