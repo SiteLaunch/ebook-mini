@@ -4,8 +4,6 @@
   --bg-1:#1E1B4B;
   --bg-2:#1E40AF;
   --bg-3:#0EA5E9;
-  --accent:#3B82F6;
-  --accent-2:#22D3EE;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -20,9 +18,9 @@ body{
     linear-gradient(180deg,var(--bg-1),var(--bg-2),var(--bg-3));
 }
 
+/* WRAP */
 .wrap{
-  max-width:100%;
-  padding:28px 16px 80px;
+  padding:28px 16px 72px;
 }
 
 /* HERO */
@@ -43,11 +41,11 @@ body{
   line-height:1.6;
 }
 
-/* SECTION TITLE */
+/* SECTION */
 .section-title{
   font-size:1.1rem;
   font-weight:900;
-  margin:24px 0 14px;
+  margin:22px 0 14px;
 }
 
 /* NETFLIX ROW */
@@ -105,7 +103,7 @@ body{
   opacity:.8;
 }
 
-/* NOTE */
+/* FOOTER NOTE */
 .note{
   margin-top:36px;
   font-size:.85rem;
