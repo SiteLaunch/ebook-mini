@@ -10,43 +10,51 @@
 
 <div class="wrap">
 
+  <!-- HERO -->
   <div class="hero">
-    <h1>Kau bukan malas.<br>Kau cuma asyik tangguh.</h1>
-    <p>Koleksi mini ebook. Semua boleh baca.</p>
+    <h1>
+      Mini Ebook.<br>
+      Baca Sikit, Terus Buat.
+    </h1>
+    <p>
+      Koleksi ebook percuma untuk orang yang sebenarnya dah tahu,
+      cuma belum mula.
+    </p>
   </div>
 
-  <div id="ebookList"></div>
+  <!-- EBOOK 01 -->
+  <a href="ebooks/ebook-01/index.html" style="text-decoration:none">
+    <div class="card">
+      <span class="badge">EBOOK 01</span>
+      <h2>Kau Bukan Malas</h2>
+      <p>Kau cuma asyik tangguh.</p>
+    </div>
+  </a>
+
+  <!-- EBOOK 02 -->
+  <a href="ebooks/ebook-02/index.html" style="text-decoration:none">
+    <div class="card">
+      <span class="badge">EBOOK 02</span>
+      <h2>Tak Kaya Sebab Tak Konsisten</h2>
+      <p>Masalah fokus & disiplin kecil.</p>
+    </div>
+  </a>
+
+  <!-- EBOOK 03 -->
+  <a href="ebooks/ebook-03/index.html" style="text-decoration:none">
+    <div class="card">
+      <span class="badge">EBOOK 03</span>
+      <h2>Buat Dulu, Cantik Kemudian</h2>
+      <p>Untuk yang asyik overthinking.</p>
+    </div>
+  </a>
 
   <div class="note">
-    Semua ebook percuma di depan.<br>
-    Versi sambungan ada di dalam bacaan.
+    Semua ebook ini percuma.<br>
+    Baca ikut turutan atau pilih mana yang kena dengan kau.
   </div>
 
 </div>
-
-<script>
-fetch('ebooks.json')
-  .then(r => r.json())
-  .then(data => {
-    const list = document.getElementById('ebookList');
-
-    data.forEach((e, i) => {
-      const card = document.createElement('div');
-      card.className = 'card';
-
-      card.innerHTML = `
-        <span class="badge">EBOOK ${String(i+1).padStart(2,'0')} • FREE</span>
-        <h2>${e.title}</h2>
-        ${e.subtitle ? `<p>${e.subtitle}</p>` : ``}
-        <p>${e.desc}</p>
-        <a href="ebooks/${e.id}/index.html" class="btn">
-          Baca Ebook
-        </a>
-      `;
-      list.appendChild(card);
-    });
-  });
-</script>
 
 </body>
 </html>
