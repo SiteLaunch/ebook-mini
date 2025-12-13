@@ -3,56 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mini Ebook</title>
+<title>EbookKu</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="page">
+<div class="container">
 
-  <div class="header">
-    <h1>Mini Ebook</h1>
-    <p>Bacaan pendek untuk orang yang nak mula.</p>
-  </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">📚</div>
+    <h1>EbookKu</h1>
+  </header>
 
-  <div class="section">Untuk Mula</div>
-  <div class="list">
+  <!-- GRID -->
+  <section class="grid">
 
-    <a class="item" href="ebooks/ebook-01/index.html">
+    <a class="ebook-card" href="ebooks/ebook-01/index.html">
       <img src="ebooks/ebook-01/cover.png" alt="">
-      <div>
-        <h3>Kau Bukan Malas</h3>
-        <span>Kau cuma asyik tangguh</span>
-      </div>
+      <h3>Kuasa Bisnes Online</h3>
     </a>
 
-    <a class="item" href="ebooks/ebook-02/index.html">
+    <a class="ebook-card" href="ebooks/ebook-02/index.html">
       <img src="ebooks/ebook-02/cover.png" alt="">
-      <div>
-        <h3>Tak Kaya Sebab Tak Konsisten</h3>
-        <span>Fokus & disiplin kecil</span>
-      </div>
+      <h3>Ebook Contoh 2</h3>
     </a>
 
-  </div>
-
-  <div class="section">Untuk Overthinking</div>
-  <div class="list">
-
-    <a class="item" href="ebooks/ebook-03/index.html">
-      <img src="ebooks/ebook-03/cover.png" alt="">
-      <div>
-        <h3>Buat Dulu, Cantik Kemudian</h3>
-        <span>Berhenti tunggu sempurna</span>
-      </div>
+    <a class="ebook-card empty" href="#">
+      <div class="placeholder">+</div>
+      <h3>Ebook Contoh 3</h3>
     </a>
 
-  </div>
-
-  <div class="footer">
-    Semua ebook ini percuma.<br>
-    Baca ikut rentak kau.
-  </div>
+  </section>
 
 </div>
 
