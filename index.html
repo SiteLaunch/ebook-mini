@@ -4,203 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Koleksi Ebook Mini</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --bg-1:#1E1B4B;
-  --bg-2:#1E40AF;
-  --bg-3:#0EA5E9;
-
-  --accent:#3B82F6;
-  --accent-2:#22D3EE;
-  --accent-soft:#E0F2FE;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-  font-family:Inter,system-ui,sans-serif;
-  min-height:100vh;
-  color:white;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(34,211,238,.35), transparent 40%),
-    radial-gradient(800px 500px at 90% 20%, rgba(59,130,246,.35), transparent 45%),
-    linear-gradient(180deg,var(--bg-1),var(--bg-2),var(--bg-3));
-}
-
-/* LAYOUT */
-.wrap{
-  max-width:520px;
-  margin:auto;
-  padding:32px 20px 80px;
-}
-
-/* HERO */
-.hero{
-  background:linear-gradient(135deg,var(--accent),var(--accent-2));
-  border-radius:30px;
-  padding:40px 28px 44px;
-  margin-bottom:40px;
-  box-shadow:
-    0 40px 90px rgba(14,165,233,.45),
-    inset 0 0 0 1px rgba(255,255,255,.18);
-}
-
-.hero h1{
-  font-size:2.15rem;
-  font-weight:900;
-  line-height:1.12;
-  letter-spacing:-.02em;
-  margin-bottom:16px;
-}
-
-.hero p{
-  opacity:.95;
-  line-height:1.6;
-  font-size:1.05rem;
-}
-
-/* SECTION */
-.section-title{
-  font-size:1.15rem;
-  font-weight:900;
-  margin-bottom:18px;
-  letter-spacing:.03em;
-}
-
-/* GLASS CARD */
-.ebook{
-  display:flex;
-  gap:14px;
-  align-items:center;
-
-  background:rgba(255,255,255,.12);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:24px;
-  padding:16px;
-  margin-bottom:18px;
-
-  box-shadow:
-    0 20px 40px rgba(0,0,0,.25),
-    inset 0 0 0 1px rgba(255,255,255,.05);
-}
-
-.ebook img{
-  width:86px;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,.45);
-}
-
-.ebook h3{
-  font-size:1rem;
-  font-weight:900;
-  line-height:1.25;
-  margin-bottom:6px;
-  color:#FFFFFF;
-}
-
-.ebook p{
-  font-size:.9rem;
-  line-height:1.5;
-  color:rgba(255,255,255,.85);
-}
-
-/* BADGE */
-.badge{
-  display:inline-block;
-  font-size:.7rem;
-  font-weight:800;
-  padding:5px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.2);
-  color:#E0F2FE;
-  border:1px solid rgba(255,255,255,.25);
-  margin-bottom:6px;
-}
-
-/* BUTTON */
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:11px 16px;
-  border-radius:14px;
-  background:linear-gradient(135deg,var(--accent),#2563EB);
-  color:white;
-  font-size:.85rem;
-  font-weight:900;
-  text-decoration:none;
-  box-shadow:0 12px 26px rgba(59,130,246,.45);
-}
-
-/* FOOTER */
-.footer-note{
-  margin-top:40px;
-  font-size:.9rem;
-  opacity:.85;
-  text-align:center;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="wrap">
 
-  <!-- HERO -->
   <div class="hero">
-    <h1>
-      Kau bukan malas.<br>
-      Kau cuma asyik tangguh.
-    </h1>
-    <p>
-      Koleksi bacaan ringkas untuk orang yang sebenarnya dah tahu,
-      cuma belum mula.
-    </p>
+    <h1>Kau bukan malas.<br>Kau cuma asyik tangguh.</h1>
+    <p>Koleksi bacaan ringkas untuk orang yang sebenarnya dah tahu, cuma belum mula.</p>
   </div>
 
-  <div class="section-title">Koleksi Ebook (Percuma)</div>
-
-  <!-- EBOOK 01 -->
-  <div class="ebook">
-    <img src="covers/cover-ebook-1.jpg" alt="Ebook 01">
-    <div>
-      <span class="badge">EBOOK 01 • FREE</span>
-      <h3>Kau Bukan Malas.<br>Kau Cuma Asyik Tangguh.</h3>
-      <p>Pecahkan inertia dan mula bertindak.</p>
-      <a href="free-ebook.html" class="btn">Baca Ebook</a>
-    </div>
+  <div class="card">
+    <span class="badge">EBOOK 01 • FREE</span>
+    <h2>Kau Bukan Malas</h2>
+    <p>Pecahkan inertia dan mula bertindak.</p>
+    <a href="free-ebook.html" class="btn">Baca Ebook</a>
   </div>
 
-  <!-- EBOOK 02 -->
-  <div class="ebook">
-    <img src="covers/cover-ebook-1-premium.jpg" alt="Ebook 02">
-    <div>
-      <span class="badge">EBOOK 02 • FREE</span>
-      <h3>Tak Kaya Bukan Sebab Tak Pandai.<br>Tapi Sebab Tak Konsisten.</h3>
-      <p>Tentang fokus, disiplin dan konsistensi.</p>
-      <a href="free-ebook.html" class="btn">Baca Ebook</a>
-    </div>
+  <div class="card">
+    <span class="badge">EBOOK 02 • FREE</span>
+    <h2>Tak Kaya Sebab Tak Konsisten</h2>
+    <p>Tentang fokus dan disiplin.</p>
+    <a href="free-ebook.html" class="btn">Baca Ebook</a>
   </div>
 
-  <!-- EBOOK 03 -->
-  <div class="ebook">
-    <img src="covers/cover-ebook-1-premium.jpg" alt="Ebook 03">
-    <div>
-      <span class="badge">EBOOK 03 • FREE</span>
-      <h3>Buat Dulu.<br>Cantik Kemudian.</h3>
-      <p>Untuk yang asyik tunggu sempurna.</p>
-      <a href="free-ebook.html" class="btn">Baca Ebook</a>
-    </div>
-  </div>
-
-  <div class="footer-note">
+  <div class="note">
     Semua ebook boleh dibaca percuma.<br>
-    Versi sambungan disediakan di dalam bacaan.
+    Versi sambungan ada di dalam bacaan.
   </div>
 
 </div>
