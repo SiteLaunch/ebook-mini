@@ -12,29 +12,41 @@
 
   <div class="hero">
     <h1>Kau bukan malas.<br>Kau cuma asyik tangguh.</h1>
-    <p>Koleksi bacaan ringkas untuk orang yang sebenarnya dah tahu, cuma belum mula.</p>
+    <p>Koleksi mini ebook. Semua boleh baca.</p>
   </div>
 
-  <div class="card">
-    <span class="badge">EBOOK 01 • FREE</span>
-    <h2>Kau Bukan Malas</h2>
-    <p>Pecahkan inertia dan mula bertindak.</p>
-    <a href="free-ebook.html" class="btn">Baca Ebook</a>
-  </div>
-
-  <div class="card">
-    <span class="badge">EBOOK 02 • FREE</span>
-    <h2>Tak Kaya Sebab Tak Konsisten</h2>
-    <p>Tentang fokus dan disiplin.</p>
-    <a href="free-ebook.html" class="btn">Baca Ebook</a>
-  </div>
+  <div id="ebookList"></div>
 
   <div class="note">
-    Semua ebook boleh dibaca percuma.<br>
+    Semua ebook percuma di depan.<br>
     Versi sambungan ada di dalam bacaan.
   </div>
 
 </div>
+
+<script>
+fetch('ebooks.json')
+  .then(r => r.json())
+  .then(data => {
+    const list = document.getElementById('ebookList');
+
+    data.forEach((e, i) => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      card.innerHTML = `
+        <span class="badge">EBOOK ${String(i+1).padStart(2,'0')} • FREE</span>
+        <h2>${e.title}</h2>
+        ${e.subtitle ? `<p>${e.subtitle}</p>` : ``}
+        <p>${e.desc}</p>
+        <a href="ebooks/${e.id}/index.html" class="btn">
+          Baca Ebook
+        </a>
+      `;
+      list.appendChild(card);
+    });
+  });
+</script>
 
 </body>
 </html>
